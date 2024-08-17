@@ -48,12 +48,9 @@ class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta: "+titular+"\n"+"Cantidad: $"+cantidad;
+        return "Cuenta: "+this.titular+"\n"+"Cantidad: $"+this.cantidad;
     }
 
-}
-
-public class Banco {
     public static void main(String[] args) {
         Cuenta cuenta = new Cuenta();
         cuenta.setTitular();
@@ -62,5 +59,7 @@ public class Banco {
         cuenta.retirar();
         System.out.println(cuenta);
     }
+
 }
+
 
