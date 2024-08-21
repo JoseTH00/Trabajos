@@ -45,7 +45,7 @@ class Vector {
         return new Vector(nuevasCoordenadas);
     }
 
-    public static Vector crearVectorDesdeConsola() {
+    public static Vector crearVector() {
         Scanner scanner = new Scanner(System.in);
         double[] elementos = new double[3];
 
@@ -62,14 +62,14 @@ class Vector {
     }
 
     public static void main(String[] args) {
-        Vector v1 = crearVectorDesdeConsola();
+        Vector v1 = crearVector();
 
         System.out.println("Vector 1: " + v1);
 
         Vector v2 = v1.multiplicar();
         System.out.println("Vector 1 multiplicado: " + v2);
 
-        Vector v3 = crearVectorDesdeConsola();
+        Vector v3 = crearVector();
         Vector v4 = v1.sumar(v3);
         System.out.println("Suma de "+v1+" y "+v3+" = " + v4);
     }
