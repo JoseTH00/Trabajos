@@ -39,24 +39,24 @@ class Birome {
     }
 }
 
-class Main {
+class Escritura {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingrese la cantidad de tinta: ");
-        int cantidadDeTinta = scanner.nextInt();
-        scanner.nextLine();
+        int cantidadDeTinta = sc.nextInt();
+        sc.nextLine();
 
         Birome birome = new Birome(cantidadDeTinta);
         Papel papel = new Papel();
 
         System.out.print("Ingrese el texto a escribir: ");
-        String texto = scanner.nextLine();
+        String texto = sc.nextLine();
 
         birome.escribir(texto, papel);
         System.out.println("Contenido del papel: " + papel);
 
-        scanner.close();
+        sc.close();
     }
 }
 
