@@ -72,7 +72,7 @@ class Sacacorchos {
     }
 }
 
-class Main {
+class Ej6BotellaDeVino {
     public static void main(String[] args) {
         Corcho corcho = new Corcho();
         Botella botella = new Botella(corcho);
