@@ -47,7 +47,7 @@ class Persona {
     }
 
     public void setNombre() {
-        System.out.println("Ingrese su nombre");
+        System.out.println("Ingrese su nombre:");
         this.nombre = sc.nextLine();
     }
 
@@ -64,7 +64,7 @@ class Persona {
     }
 
     public void setEdad() {
-        System.out.println("Ingrese su edad");
+        System.out.println("Ingrese su edad:");
         this.edad = sc.nextInt();
     }
 
@@ -73,12 +73,12 @@ class Persona {
     }
 
     public void setPeso() {
-        System.out.println("Ingrese su peso");
+        System.out.println("Ingrese su peso:");
         this.peso = sc.nextDouble();
     }
 
     public void setAltura() {
-        System.out.println("Ingrese su altura");
+        System.out.println("Ingrese su altura:");
         this.altura = sc.nextDouble();
     }
 
