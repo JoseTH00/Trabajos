@@ -61,14 +61,18 @@ class Password {
         this.contraseña = generarPassword();
     }
 
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Indica el tamaño del array de Passwords: ");
-        int tamaño = scanner.nextInt();
+        int tamaño = sc.nextInt();
 
         System.out.print("Indica la longitud de los Passwords: ");
-        int longitud = scanner.nextInt();
+        int longitud = sc.nextInt();
 
         Password[] passwords = new Password[tamaño];
         boolean[] esFuerteArray = new boolean[tamaño];
@@ -82,7 +86,14 @@ class Password {
             System.out.println(passwords[i].getContraseña() + " " + esFuerteArray[i]);
         }
 
-        scanner.close();
+        System.out.print("Introduce una contraseña personalizada: ");
+        String contraseñaPersonalizada = sc.next();
+
+        Password customPassword = new Password();
+        customPassword.setContraseña(contraseñaPersonalizada);
+
+        System.out.println("Tu contraseña: " + customPassword.getContraseña());
+        System.out.println("¿Es fuerte? " + customPassword.esFuerte());
     }
 }
 
