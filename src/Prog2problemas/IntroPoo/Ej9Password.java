@@ -65,7 +65,7 @@ class Password {
         this.contraseña = contraseña;
     }
 
-    public static void main(String[] args) {
+    public static void GeneradorDePasswords(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Indica el tamaño del array de Passwords: ");
