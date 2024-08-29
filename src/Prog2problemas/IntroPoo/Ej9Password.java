@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Password {
+    Scanner sc = new Scanner(System.in);
+
     private int longitud;
     private String contraseña;
 
@@ -61,39 +63,41 @@ class Password {
         this.contraseña = generarPassword();
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContraseña() {
+        System.out.print("Introduce una contraseña personalizada: ");
+        this.contraseña = sc.next();
+        this.longitud = contraseña.length();
     }
 
-    public static void GeneradorDePasswords(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    class GeneradorDePasswords {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
 
-        System.out.print("Indica el tamaño del array de Passwords: ");
-        int tamaño = sc.nextInt();
+            System.out.print("Indica el tamaño del array de Passwords: ");
+            int tamaño = sc.nextInt();
 
-        System.out.print("Indica la longitud de los Passwords: ");
-        int longitud = sc.nextInt();
+            System.out.print("Indica la longitud de los Passwords: ");
+            int longitud = sc.nextInt();
 
-        Password[] passwords = new Password[tamaño];
-        boolean[] esFuerteArray = new boolean[tamaño];
+            Password[] passwords = new Password[tamaño];
+            boolean[] esFuerteArray = new boolean[tamaño];
 
-        for (int i = 0; i < tamaño; i++) {
-            passwords[i] = new Password(longitud);
-            esFuerteArray[i] = passwords[i].esFuerte();
+            for (int i = 0; i < tamaño; i++) {
+                passwords[i] = new Password(longitud);
+                esFuerteArray[i] = passwords[i].esFuerte();
+            }
+
+            for (int i = 0; i < tamaño; i++) {
+                System.out.println(passwords[i].getContraseña() + " " + esFuerteArray[i]);
+            }
+
+
+            Password customPassword = new Password();
+            customPassword.setContraseña();
+
+            System.out.println("Tu contraseña: " + customPassword.getContraseña());
+            System.out.println("¿Es fuerte? " + customPassword.esFuerte());
         }
-
-        for (int i = 0; i < tamaño; i++) {
-            System.out.println(passwords[i].getContraseña() + " " + esFuerteArray[i]);
-        }
-
-        System.out.print("Introduce una contraseña personalizada: ");
-        String contraseñaPersonalizada = sc.next();
-
-        Password customPassword = new Password();
-        customPassword.setContraseña(contraseñaPersonalizada);
-
-        System.out.println("Tu contraseña: " + customPassword.getContraseña());
-        System.out.println("¿Es fuerte? " + customPassword.esFuerte());
     }
 }
 
