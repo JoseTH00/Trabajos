@@ -39,17 +39,17 @@ class Empleado extends Humane {
 
 
 class Caja {
-    private final Empleado empleado;
+    private final Empleado empleadoo;
     private final int nroCaja;
 
-    public Caja(Empleado empleado, int nroCaja) {
-        this.empleado = empleado;
+    public Caja(Empleado empleadoo, int nroCaja) {
+        this.empleadoo = empleadoo;
         this.nroCaja = nroCaja;
     }
 
     @Override
     public String toString() {
-        return this.empleado.toString() + "\nNro de caja: " + this.nroCaja;
+        return this.empleadoo.toString() + "\nNro de caja: " + this.nroCaja;
     }
 }
 
@@ -154,8 +154,8 @@ public class Supermercado {
     public static void main(String[] args) {
 
 
-        Empleado empleado1 = new Empleado("Juan", "Pérez", 12345678, 50000);
-        Caja caja1 = new Caja(empleado1, 1);
+        Empleado empleadoo1 = new Empleado("Juan", "Pérez", 12345678, 50000);
+        Caja caja1 = new Caja(empleadoo1, 1);
 
 
         Cliente cliente1 = new Cliente("Ana", "García", 87654321, true);
@@ -174,8 +174,8 @@ public class Supermercado {
 
         System.out.println(transaccion1);
 
-        Empleado empleado2 = new Empleado("Cirilo", "Rodriguez", 12345678, 50000);
-        Caja caja2 = new Caja(empleado2, 1);
+        Empleado empleadoo2 = new Empleado("Cirilo", "Rodriguez", 12345678, 50000);
+        Caja caja2 = new Caja(empleadoo2, 1);
 
 
         Cliente cliente = new Cliente("Timoteo", "Datwo", 87654321, false);
