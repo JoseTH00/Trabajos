@@ -1,7 +1,5 @@
 package Prog2problemas.IntroPoo;
 
-import java.util.Collections;
-
 class Producto {
     private String titulo;
     private boolean entregado;
