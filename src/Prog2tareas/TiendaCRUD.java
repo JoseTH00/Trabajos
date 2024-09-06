@@ -194,7 +194,7 @@ class GestionDeClientes {
         }
 
         System.out.println("\nModificar cliente con nombre 'Juan Perez':");
-        tienda.modificarCliente("nombre", "Juan Perez", "Juan Carlos", "juan.carlos@example.com", "111222333");
+        tienda.modificarCliente("nombre", "Juan Perez", "Juan Carlos", "juan.carlos@hotmail.com", "111222333");
 
         System.out.println("\nLista de clientes después de la modificación:");
         tienda.MostrarClientes();
