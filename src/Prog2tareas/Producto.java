@@ -1,7 +1,6 @@
 package Prog2tareas;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 class Product0 {
