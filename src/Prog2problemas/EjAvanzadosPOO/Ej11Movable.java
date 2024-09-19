@@ -86,3 +86,30 @@ class Circle implements Movable {
     }
 }
 
+class Main {
+    public static void main(String[] args) {
+        Point point = new Point(0, 0, 5, 10);
+        System.out.println("Posición inicial del Point: " + point);
+
+        point.moveUp();
+        System.out.println("Después de mover hacia arriba: " + point);
+
+        point.moveRight();
+        System.out.println("Después de mover hacia la derecha: " + point);
+
+        point.moveDown();
+        System.out.println("Después de mover hacia abajo: " + point);
+
+        point.moveLeft();
+        System.out.println("Después de mover hacia la izquierda: " + point);
+
+        Circle circle = new Circle(10, point);
+        System.out.println("\nPosición inicial del Circle: " + circle);
+
+        circle.moveUp();
+        System.out.println("Después de mover el Circle hacia arriba: " + circle);
+
+        circle.moveRight();
+        System.out.println("Después de mover el Circle hacia la derecha: " + circle);
+    }
+}
