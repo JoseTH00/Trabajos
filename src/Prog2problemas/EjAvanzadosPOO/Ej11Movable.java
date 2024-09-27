@@ -48,11 +48,11 @@ class Point implements Movable {
     }
 }
 
-class Circle implements Movable {
+class MovableCircle implements Movable {
     int radius;
     Point center;
 
-    public Circle(int radius, Point center) {
+    public MovableCircle(int radius, Point center) {
         this.radius = radius;
         this.center = center;
     }
@@ -103,7 +103,7 @@ class Main {
         point.moveLeft();
         System.out.println("Después de mover hacia la izquierda: " + point);
 
-        Circle circle = new Circle(10, point);
+        MovableCircle circle = new MovableCircle(10, point);
         System.out.println("\nPosición inicial del Circle: " + circle);
 
         circle.moveUp();
