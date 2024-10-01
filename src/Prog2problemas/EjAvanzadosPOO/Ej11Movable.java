@@ -7,10 +7,10 @@ interface Movable {
     void moveLeft();
 }
 
-class Point implements Movable {
+class MovablePoint implements Movable {
     int x, y, xSpeed, ySpeed;
 
-    public Point(int x, int y, int xSpeed, int ySpeed) {
+    public MovablePoint(int x, int y, int xSpeed, int ySpeed) {
         this.x = x;
         this.y = y;
         this.xSpeed = xSpeed;
@@ -50,9 +50,9 @@ class Point implements Movable {
 
 class MovableCircle implements Movable {
     int radius;
-    Point center;
+    MovablePoint center;
 
-    public MovableCircle(int radius, Point center) {
+    public MovableCircle(int radius, MovablePoint center) {
         this.radius = radius;
         this.center = center;
     }
@@ -88,7 +88,7 @@ class MovableCircle implements Movable {
 
 class Main {
     public static void main(String[] args) {
-        Point point = new Point(0, 0, 5, 10);
+        MovablePoint point = new MovablePoint(0, 0, 5, 10);
         System.out.println("Posición inicial del Point: " + point);
 
         point.moveUp();
