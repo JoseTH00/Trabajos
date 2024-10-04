@@ -7,12 +7,14 @@ class Author {
     public Author(String name, String email, char gender) {
         this.name = name;
         this.email = email;
-        if (gender=='m' || gender=='f') {
+        gender = Character.toUpperCase(gender);
+        if (gender == 'M' || gender == 'F') {
             this.gender = gender;
         } else {
-            this.gender = 'm';
+            this.gender = 'M';
         }
     }
+
 
     public String getName() {
         return name;
