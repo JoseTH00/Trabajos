@@ -1,8 +1,7 @@
 package Prog2problemas.EjAvanzadosPOO;
 
-class Circle {
-    private double radius=1.0;
-    private String color="red";
+class Circle extends Shape {
+    protected double radius=1.0;
 
     public Circle() {
     }
@@ -14,6 +13,11 @@ class Circle {
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
+    }
+
+    public Circle(String color, boolean filled, double radius) {
+        super(color, filled);
+        this.radius = radius;
     }
 
     public double getRadius() {
@@ -39,6 +43,8 @@ class Circle {
     public double getCircumference() {
         return 2*Math.PI*radius;
     }
+
+    public double getPerimeter() {return 2*Math.PI*radius;}
 
     @Override
     public String toString() {
