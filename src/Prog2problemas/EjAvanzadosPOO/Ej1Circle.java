@@ -1,6 +1,6 @@
 package Prog2problemas.EjAvanzadosPOO;
 
-class Circle extends Shape {
+class Circle extends Shape implements GeometricObject {
     protected double radius=1.0;
 
     public Circle() {
