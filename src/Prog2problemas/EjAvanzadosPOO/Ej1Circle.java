@@ -53,7 +53,9 @@ class Circle extends Shape implements GeometricObject {
                 ", color='" + color + '\'' +
                 '}';
     }
+}
 
+class Circulo {
     public static void main(String[] args) {
         Circle circle1 = new Circle();
         System.out.println(circle1);
