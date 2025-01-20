@@ -41,7 +41,7 @@ public class CalculadoraIMC {
             System.out.printf("Su IMC es: %.2f%n", imc);
 
             if (imc < 18.5) {
-                System.out.println("Está bajo de peso.");
+                System.out.println("Tiene un peso inferior al normal.");
             } else if (imc >= 18.5 && imc < 24.9) {
                 System.out.println("Tiene un peso normal.");
             } else if (imc >= 25 && imc < 29.9) {
@@ -76,11 +76,16 @@ class Calculadora {
             }
             opcion = sc.nextInt();
 
+            System.out.println();
+
             switch (opcion) {
                 case 1:
                     calculadora.setAltura(sc);
                     calculadora.setPeso(sc);
                     calculadora.IMC();
+                    System.out.println();
+                    System.out.println("<18,5 = Peso inferior al normal\n18,5-25 = Peso normal\n25-30 = Peso superior al normal\n>30 = Obesidad");
+                    System.out.println("---------------------------");
                     break;
                 case 0:
                     System.out.println("Saliendo del programa. ¡Hasta luego!");
@@ -89,7 +94,6 @@ class Calculadora {
                     System.out.println("Opción no válida. Intente de nuevo.");
             }
         }
-
         sc.close();
     }
 }

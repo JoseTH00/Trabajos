@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignorar la carpeta .idea
+.idea/
+
+# Ignorar todos los archivos .iml
+*.iml
