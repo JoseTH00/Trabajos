@@ -1,7 +1,5 @@
 package Prog2problemas.EjAvanzadosPOO;
 
-import org.w3c.dom.html.HTMLParagraphElement;
-
 import java.util.Arrays;
 
 class Book {
